@@ -1,0 +1,64 @@
+.youtube-video {
+    margin: 1.5em auto;
+    position: relative;
+    width: 100%;
+
+    @include screen(tablet) {
+        &.mqdefault { width: 320px; }
+        &.hqdefault { max-width: 480px; }
+        &.sddefault { max-width: 640px; }
+    }
+
+    .video {
+        position: relative;
+        display: block;
+        color: #fff;
+        width: 100%;
+
+        &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: '\f144';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            font-size: 3.5em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &:hover::after {
+            color: #fff;
+        }
+    }
+    .youtube-transcript {
+        font-size: 0.75em;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.1);
+            padding: 0 0.75em;
+        
+            &:hover {
+                color: #007eb1;
+            }
+        }
+        .fa-file-alt {
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.2);
+            font-size: 1.35em;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.image-banner {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #f6f6f6;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+    &.parallax {
+        background: transparent;
+    }
+ 
+    @include screen('tablet') {
+        height: 400px;
+    }
+    
+    .image-rights {
+        position: absolute;
+        right: 0;
+        font-size: 0.75em;
+        color: #ccc;
+        background-color: rgba(0,0,0,0.65);
+        transition: all 0.15s ease;
+        display: flex;
+        opacity: 1;
+        bottom: 0;
+        
+        @include screen(desktop) {
+            opacity: 0;
+            bottom: -25px;
+        }
+    
+        .owner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0.75em;
+        }
+        .fa-camera {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.65);
+            font-size: 1.35em;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    
+    @include screen(desktop) {
+        &:hover .image-rights {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}

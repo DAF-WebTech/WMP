@@ -1,0 +1,17 @@
+.marketing-banner {
+    .marketing-content {    
+        a {
+            border-radius: 5px;
+            padding: 1rem 1.5rem;
+            background-color: rgba(255,255,255,0.5);
+            color: #111;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            
+            &:hover {
+                background-color: rgba(255,255,255,1);
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.section-nav {
+    margin: 2em 0 0 0;
+    position: sticky;
+    top: 1em;
+    
+    @include screen(tablet) {
+        margin: 0;
+    }
+    
+    @include print {
+        display: none;
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 1.5em;
+        margin: 0;
+        text-decoration: none;
+        transition: background 0.1s ease;
+        color: #333;
+    }
+    a:hover {
+        color: #111;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
+
+        a {
+            padding: 0.75em 1.5rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .secondary-nav {
+        .active {
+            > a {
+                font-weight: bold;
+            }
+            > a::after {
+                display: none;
+            }
+        }
+        
+        .secondary-sub-nav {
+            a {
+                padding-left: 2.5rem;
+            }
+        }
+    }
+}

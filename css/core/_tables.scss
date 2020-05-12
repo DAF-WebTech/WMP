@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    
+    th, td {
+        padding: 0.5em 1em;
+    }
+    thead th,
+    tbody th,
+    tbody tr:first-child th {
+        text-align: left;
+    }
+    caption { 
+        display: table-caption;
+        text-align: center;
+    }
+    
+    .right {
+        text-align: right;
+    }
+    .center {
+        text-align: center;
+    }
+    tbody {
+        th,
+        td {
+           vertical-align: top; 
+        }
+    }
+    
+}
+.responsive-table {
+    margin-bottom: 2em;
+    overflow-x: auto;
+    
+    table {
+        margin: 0;
+    }
+
+    &.sticky {
+        thead tr th:first-child,
+        tbody tr th:first-child,
+        tbody tr td:first-child,
+        tfoot tr td:first-child,
+        tfoot tr th:first-child {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+    }
+}

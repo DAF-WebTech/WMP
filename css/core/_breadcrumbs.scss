@@ -1,0 +1,33 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0.25em 0 1em 0;
+    font-size: 0.88rem;
+
+    li:not(:last-child)::after {
+        padding: 0 0.5em;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054";
+    }
+
+    li:last-child {
+        font-weight: 700
+    }
+
+    a,
+    a:active,
+    a:visited {
+        text-decoration: none
+    }
+    a:hover {
+        text-decoration: underline
+    }
+    @include print {
+        a::after {
+            display: none;
+        }
+    }
+}

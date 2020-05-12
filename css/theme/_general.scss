@@ -1,0 +1,16 @@
+body {
+    color: #222;
+}
+
+a {
+    color: #007eb1;
+}
+a:hover {
+    color: #ff8100;
+}
+
+:focus {
+    outline-color: #c00;
+    outline-style: auto;
+    outline-width: 1px;
+}

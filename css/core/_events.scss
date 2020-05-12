@@ -1,0 +1,44 @@
+.event {
+    .event-description {
+        margin-top: 1em;
+    }
+}
+
+.event-listing {
+    @include screen(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
+    border-top-width: 2px;
+    
+    .event-item {
+        border: 1px solid #e6e6e6;
+        border-bottom-width: 2px;
+        @include screen(tablet) {
+            width: calc(33.33333333% - 1em);
+        }
+        margin: 0.5em;
+
+        .event-image {
+            background-color: #e6e6e6;
+        }
+        .event-summary {
+            background-color: #fff;
+            padding: 1em;
+                    
+            p:last-child {
+                margin-bottom: 0;
+            }
+            .event-date {
+                font-size: 0.9em;
+                color: #666;
+            }
+        }
+    }
+}

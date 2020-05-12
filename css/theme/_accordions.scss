@@ -1,0 +1,46 @@
+.accordion {
+
+    .accordion-item {
+
+        .accordion-title {
+            color: #555;
+            border-bottom: 1px solid #ddd;
+
+            .toggle::after {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                right: 0.5em;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                font-size: 1.1em;
+                content: '+';
+                transition: all 0.1s ease;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border: 1px solid #aaa;
+                color: #aaa;
+            }
+        
+            &:hover,
+            &:hover .toggle::after {
+                color: #007eb1;
+            }
+            &:hover .toggle::after {
+                border-color: #007eb1;
+            }
+        }
+        &.active {
+            .accordion-title,
+            .accordion-title .toggle::after {
+                color: #007eb1;
+                border-color: #007eb1;
+                border-width: 2px;
+                content: "−";
+            }
+        }
+    }
+}

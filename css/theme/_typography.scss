@@ -1,0 +1,22 @@
+h1 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.25em;
+}
+
+blockquote {
+    color: #007eb1;
+
+    footer {
+        color: #777;
+    }
+    &::after {
+        color: #e6e6e6;
+    }
+}
+.pullquote {
+    color: #007eb1;
+}
+
+hr {
+    border-top: 1px dashed #bbb;
+}

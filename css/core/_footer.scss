@@ -1,0 +1,50 @@
+footer.footer {
+    padding: 2em 1em;
+    font-size: 0.85em;
+
+    .footer-links {
+        @include print {
+            display: block;
+        }
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        li {
+            display: block;
+            padding: 0 0.75em;
+            margin: 0 0 0.5em 0;
+            line-height: 1.25;
+            @include screen('desktop') {
+                margin: 0;
+            }
+            
+            &.no-print {
+                @include print {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .copyright {
+        margin: 0;
+        padding: 1em 0 0 0;
+        p {
+            margin: 0;
+            text-align: center;
+        }
+    }
+    
+    a,
+    a:active,
+    a:visited {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}

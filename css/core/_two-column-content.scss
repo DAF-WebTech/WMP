@@ -1,0 +1,19 @@
+.two-column-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    list-style-type: none;
+    
+    @include screen(tablet) {
+        flex-direction: row;
+        margin: 0 -1rem 2rem 0;
+    }
+    
+    li {
+        @include screen(tablet) {
+            width: 50%;
+            margin: 0 1rem;
+        }
+    }
+}

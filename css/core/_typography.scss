@@ -1,0 +1,123 @@
+h1 {
+    margin: 0 0 0.5em 0;
+}
+h2, h3, h4, h5, h6 {
+    margin: 0 0 1em 0;
+}
+
+.disc { list-style-type: disc; }
+.circle { list-style-type: circle; }
+.none { list-style-type: none; }
+
+.decimal { list-style-type: decimal; }
+.decimal-leading-zero { list-style-type: decimal-leading-zero; }
+.square { list-style-type: square; }
+.lower-alpha { list-style-type: lower-alpha; }
+.lower-roman { list-style-type: lower-roman; }
+.upper-alpha { list-style-type: upper-alpha; }
+.upper-roman { list-style-type: upper-roman; }
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 1em 2.5em;
+    
+    ul, ol {
+        margin: 0 0 0 2em;
+    }
+}
+
+blockquote {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.5;
+    margin: 1.75em 0 1.75em 2.75em;
+
+    footer {
+        font-size: 0.6em;
+        font-weight: 700;
+        font-style: italic;
+        float: right;
+        margin-top: 0.4em;
+    
+        &:before {
+            content: '\2015 ';  
+        }
+    }
+    &::after {
+        content: '\201D';
+        position: absolute;
+        top: -0.4em;
+        right: 0;
+        font-size: 6em;
+        font-style: italic;
+        z-index: -1;
+    }
+}
+
+.pullquote {
+    float: right;
+    width: 33.33333333%;
+    font-weight: 400;
+    font-size: 1.35em;
+    line-height: 1.5;
+    margin: -1em 0 1em 1.5em;
+}
+.meta {
+    font-size: 0.75rem;
+    color: #666;
+    
+    a {
+        color: #666;
+    }
+    
+    img {
+        display: inline;
+    }
+}
+
+code, pre {
+    font-family: monospace, monospace;
+}
+code {
+    padding: 0.1rem 0.35rem;
+    margin: 0 .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: #f1f1f1;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+pre > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+}
+
+hr {
+    margin: 1.5em 0;
+    width: 100%;
+    height: 0;
+    border-style: none;
+}
+
+dl {
+    margin: 0 0 1em 0;
+    
+    dt {
+        font-weight: bold;
+    }
+    dd {
+        
+    }
+}
+
+@include print {
+    .content a:after,
+    .footer a:after {
+        content:" (" attr(href) ") ";
+        font-size:0.8em;
+        font-weight:normal;
+        text-decoration: underline;
+    }
+}

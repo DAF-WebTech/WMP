@@ -1,0 +1,12 @@
+.breadcrumbs {
+
+    li:not(:last-child)::after {
+        color: #bbb;
+    }
+
+    a,
+    a:active,
+    a:visited {
+        color: #111;
+    }
+}

@@ -1,0 +1,50 @@
+header {
+    background: linear-gradient(to right, #111 0%, #0b2e4c 100%);
+
+    @include print {
+        background-color: #fff;
+    }
+    
+    .header {
+
+        a {
+            color: #fff;
+            
+            @include print {
+                color: #000;
+            }
+        }
+        .global-search {
+
+            button {
+                background-color: #12b0e2;
+                color: #fff;
+            }
+        }
+        
+        .header-utilities {
+            background-color: #007eb1;
+            
+            @include screen('tablet') {
+                background-color: transparent;
+            }
+
+            .icon-menu-toggle {
+                background-color: #004967;
+                
+                .icon-menu-bar {
+                    background-color: #fff;
+                }
+                &.active { 
+                    background-color: #ff6a00;
+                }
+            }
+            .utilities {
+
+                > li {
+                    border-right: 1px solid #666;
+                }
+            }
+        }
+    }
+}

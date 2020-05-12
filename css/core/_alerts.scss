@@ -1,0 +1,36 @@
+.alert {
+    display: block;
+    margin: 1.5em 0;
+    padding: 0.75em 1em;
+    border-radius: 0 3px 3px 0;
+    position: relative;
+    overflow: hidden;
+
+    p:not(last-child) {
+        margin-bottom: 0;
+    }
+    
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        font-family: "Font Awesome 5 Free";
+        font-size: 10em;
+        font-weight: 700;
+        transform: translateY(-50%);
+        z-index: -1;
+        opacity: 0.065;
+    }
+    &.info::after {
+        content: "\f05a";
+    }
+    &.warning::after {
+        content: "\f071";
+    }
+    &.danger::after {
+        content: "\f057";
+    }
+    &.success::after {
+        content: "\f058";
+    }
+}

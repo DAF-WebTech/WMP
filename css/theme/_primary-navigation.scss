@@ -1,0 +1,41 @@
+.primary-nav-container {
+    background-color: #333;
+    
+    @include screen(desktop) {
+        background-color: #007eb1;
+    }
+
+    .primary-nav {
+        li {
+            transition: all 0.1s ease;
+        }
+        > li:hover {
+            background-color: #189cc6;
+        }
+        li a {
+            color: #fff;
+        }
+        .mobile {
+            background-color: #444;
+        }
+    
+        &.simple {
+            .primary-sub-nav {
+                > li {
+                    background-color: #222;
+                }
+                > li:hover {
+                    background-color: #444;
+                }
+            }
+        }
+        &.mega {
+            .primary-sub-nav {
+                background-color: #111;
+            }
+            .sub-nav-topics {
+                color: #999;
+            }
+        }
+    }
+}

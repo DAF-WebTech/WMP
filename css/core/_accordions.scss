@@ -1,0 +1,95 @@
+.accordion {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .accordion-item {
+        
+        .accordion-title {
+            margin: 0;
+            padding: 0.75em;
+            transition: all 0.1s ease;
+            font-weight: normal;
+            position: relative;
+            
+            @include print {
+                .toggle {
+                    display: none;
+                }
+            }
+            .toggle::after {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                right: 0.5em;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                font-size: 1.1em;
+                content: '+';
+                transition: all 0.1s ease;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            &:hover,
+            &:hover .toggle::after {
+                cursor: pointer;
+            }
+        }
+        &.active {
+            .accordion-content {
+                opacity: 1;
+            }
+        }
+        
+        .accordion-content {
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            padding: 1em;
+            overflow: hidden;
+            display: none;
+            @include print {
+                display: block;
+                opacity: 1;
+            }
+
+            p:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.accordion-container {
+    margin: 0 0 1em 0;
+
+    + .accordion-container {
+        margin-top: -1em;
+    }
+}
+
+.accordion-two-column {
+    display: flex;
+    flex-direction: column;
+    @include screen(tablet) {
+        flex-direction: row;
+    }
+    
+    > * {
+        padding: 1rem;
+        @include screen(tablet) {
+            width: 50%;
+        }
+    }
+    
+    .content-column-a { order: 1; }
+    .content-column-b { order: 2; }
+    
+    &.right {
+        .content-column-a { order: 2; }
+        .content-column-b { order: 1; }
+    }
+}
+

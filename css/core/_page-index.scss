@@ -1,0 +1,84 @@
+.page-index-heading {
+    margin-bottom: 0.25rem;
+}
+
+.page-index {
+    width: 100%;
+    margin: 0 -0.75rem 2rem -0.75rem;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    .page-index-item {
+        width: calc(100% - 1.5rem);
+        margin: 0.75rem;
+        
+        .index-image {
+            height: 250px;
+            overflow: hidden;
+            
+            a {
+                transition: all 0.75s ease-in-out;
+                transform: scale(1);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                display: block;
+    
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .index-content {
+            padding: 0.5rem;
+        
+            h2 {
+                font-size: 1.2em;
+            }
+            
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    @include screen(tablet) {
+        &.col-2 {
+            .page-index-item { 
+                width: calc(50% - 1.5rem); 
+            
+                .index-image {
+                    height: 250px;
+                }
+            }
+        }
+        &.col-3 {
+            .page-index-item { 
+                width: calc(33.33333333% - 1.5rem); 
+        
+                .index-image {
+                    height: 160px;    
+                }
+            }
+        }
+        &.col-4 {
+            .page-index-item { 
+                width: calc(25% - 1.5rem); 
+            
+                .index-image {
+                    height: 120px;
+                }
+            }
+        }
+    }
+    
+    &.no-title .index-title,
+    &.no-thumb .index-image, 
+    &.no-desc .index-description {
+        display: none; 
+    }
+}

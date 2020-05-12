@@ -1,0 +1,110 @@
+.content-image {
+    display: block;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    /* Disable print URL for content images */
+    a::after {
+        @include print {
+            display: none;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    
+    @include screen('mobile') {
+        &.w50 {
+            width: 100% !important;
+        }
+    }
+
+    .image-container {
+        position: relative;
+        overflow: hidden;
+
+        .image-rights {
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            font-size: 0.75rem;
+            color: #ccc;
+            background-color: rgba(0,0,0,0.65);
+            opacity: 0;
+            transition: all 0.15s ease;
+            display: flex;
+        
+            .owner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0.75em;
+            }
+            .fa-camera {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0,0,0,0.65);
+                font-size: 1.35em;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+        &:hover .image-rights {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+
+    .image-caption {
+        padding: 0.75em 1em;
+        background-color: #efefef;
+        border: 1px solid rgba(0,0,0,0.1);
+        font-size: 0.8em;
+        color: #333;
+    
+        p:last-child {
+            margin: 0;
+        }
+    }
+    
+    &.image-left {
+        @include screen(tablet) {
+            margin: 0 1.5em 1em 0;
+            float: left;
+            
+            &.w33 {
+                width: calc(33.33333333% - 1.5em);
+            }
+            &.w50 {
+                width: calc(50% - 1.5em);
+            }
+        }
+    }
+    
+    &.image-right {
+        @include screen(tablet) {
+            margin: 0 0 1em 1.5em;
+            float: right;
+        }
+    }
+
+    &.image-center {
+        @include screen(tablet) {
+            margin: 0 auto 1em auto;
+        }
+    }
+    
+    &.w33 { width: 33.33333333%; }
+    &.w50 { width: 50%; }
+    &.full-width { width: 100%; }
+    &.original { width: auto; }
+}
+
+.content-image.image-left ~ .content-image.image-left {
+    margin-left: 1.5em;
+    margin-right: 0;
+}

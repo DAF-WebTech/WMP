@@ -1,0 +1,44 @@
+.marketing-banner {
+    &.fullscreen {
+        height: 450px;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;    
+    }
+    &.column {
+        height: 350px;
+    }
+    position: relative;
+    overflow: hidden;
+
+    .marketing-content {    
+        position: relative;
+        height: 100%;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        padding: 3rem;
+        max-width: 900px;
+        margin: 0 auto;
+
+        .marketing-text {
+            text-align:center;
+        }
+        a {
+            display: block;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

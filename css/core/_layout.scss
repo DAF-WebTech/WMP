@@ -1,0 +1,81 @@
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 1.5em;
+    position: relative;
+    overflow-x: hidden;
+    
+    @include screen('tablet') {
+        padding: 1.5em 2em;
+    }
+    @include screen('desktop') {
+        display: flex;
+        flex: 1 0 auto;
+        align-items: flex-start;
+        height: 100%;
+    }
+    > .container {
+        display: flex;
+        flex-direction: column;
+
+        @include screen('desktop') {
+            flex-direction: row;
+        }
+    }
+    @include print {
+        display: block;
+        height: auto;
+    }
+}
+
+.left-column {
+    order: 3;
+    position: relative;
+    
+    @include screen('desktop') {
+        flex-shrink: 0;
+        width: 20%;
+        order: 1;
+    }
+}
+.main-content {
+    order: 1;
+    padding: 0;
+    
+    @include print {
+        page-break-inside: avoid;
+        display: block;
+        padding: 0;
+    }
+    
+    @include screen('desktop') {
+        order: 2;
+        padding: 0 2.5em;
+        width: 60%;
+    }
+}
+
+.fullwidth .main-content {
+    width: 100%;
+    @include screen('desktop') {
+        padding: 0;
+    }
+}
+
+.right-column {
+    order: 2;
+    margin-top: 1em;
+
+    @include screen('desktop') {
+        margin: 0;
+        flex-shrink: 0;
+        width: 20%;
+    }
+    @include print {
+        display: block;
+    }
+}

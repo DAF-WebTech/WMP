@@ -1,0 +1,79 @@
+.fat-footer {
+    @include print {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.75em 0;
+        @include screen('desktop') {
+            padding: 0;
+        }
+
+        > div {
+            width: 100%;
+            padding: 0.5em 2em;
+
+            @include screen('desktop') {
+                padding: 1.75em 2em;
+                width: 25%;
+            }
+        }
+    }
+    
+    h3 {
+        margin: 0 0 0.25em 0;
+        padding: 0 0 0.25em 0;
+        position: relative;
+
+        button {
+            @include screen('desktop') {
+                display: none;
+            }
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border-style: none;
+            position: relative;
+            color: inherit;
+            cursor: pointer;
+            float: right;
+            outline: none;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: 13px;
+                transform: translate(-50%, -50%) rotateZ(135deg);
+                width: 12px;
+                height: 12px;
+                border-top: 3px solid #fff;
+                border-right: 3px solid #fff;
+                content: "";
+            }
+        }
+        &.active button::after {
+            top: 18px;
+            transform: translate(-50%, -50%) rotateZ(-45deg);
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: none;
+        @include screen('desktop') {
+            display: block;
+        }
+    }
+
+   a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
