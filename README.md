@@ -15,7 +15,7 @@ git remote -v
 git remote set-url origin https://github.com/DAF-WebTech/WMP.git
 
 --this command will change the origin to intranet
-git remote set-url origin https://github.com/DAF-WebTech/WMP.git
+git remote set-url origin http://appsuppt103/stash/scm/wsf/wmp.git
 
 
 
