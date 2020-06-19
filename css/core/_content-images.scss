@@ -97,6 +97,9 @@
             margin: 0 auto 1em auto;
         }
     }
+	&.side-by-side {
+		display: inline-block;
+	}
     
     &.w33 { width: 33.33333333%; }
     &.w50 { width: 50%; }
