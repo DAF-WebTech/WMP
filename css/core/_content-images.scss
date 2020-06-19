@@ -1,8 +1,7 @@
 .content-image {
-    display: block;
-    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
     width: 45%;
 
     /* Disable print URL for content images */
@@ -98,7 +97,9 @@
         }
     }
 	&.side-by-side {
-		display: inline-block;
+		@include screen(tablet) {
+			display: inline-block;
+		}
 	}
     
     &.w33 { width: 33.33333333%; }
