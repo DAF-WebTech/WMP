@@ -100,13 +100,13 @@
 		@include screen(tablet) {
 			display: inline-block;
 			vertical-align: top;
-			margin: 1rem 0.5rem;
+			margin: 1rem 0.75rem;
 		}
 		&.w33 {
-			width: calc(33.33333333% - 1rem);
+			width: calc(33.33333333% - 1.5rem);
 		}
 		&.w50 {
-			width: calc(50% - 1rem);
+			width: calc(50% - 1.5rem);
 		}
 	}
     
