@@ -100,7 +100,7 @@
 		@include screen(tablet) {
 			display: inline-block;
 			vertical-align: top;
-			margin: 0.5rem;
+			margin: 1rem 0.5rem;
 		}
 		&.w33 {
 			width: calc(33.33333333% - 1rem);
