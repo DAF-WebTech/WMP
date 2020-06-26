@@ -2,6 +2,8 @@
     $desktop: "(min-width: 1000px)";
     $tablet: "(min-width: 750px)";
     $mobile: "(max-width: 749px)";
+	$ipad-portrait: "(min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)";
+	$ipad-landscape: "(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";	
 
     @if $size == desktop {
         @media only screen and #{$desktop} {
@@ -18,6 +20,21 @@
             @content;
         }
     }
+	@else if $size == ipad-portrait {
+        @media only screen and #{$ipad-portrait} {
+            @content;
+        }
+	}	
+	@else if $size == ipad-landscape {
+        @media only screen and #{$ipad-landscape} {
+            @content;
+        }
+	}	
+	@else if $size == print {
+        @media print {
+            @content;
+        }
+	}	
     @else {
         @media only screen and #{$size} {
             @content;
@@ -25,6 +42,7 @@
     }
 }
 
+/* Outdated print mixin */
 @mixin print {
     @media print {
         @content;
