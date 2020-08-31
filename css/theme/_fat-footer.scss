@@ -2,7 +2,19 @@
     background-color: #333;
     color: #fff;
     
-    h3 {
+	.container {
+		> div {
+            width: 100%;
+            padding: 0.5em 2em;
+
+            @include screen('desktop') {
+                padding: 1.75em 2em;
+                width: 25%;
+            }
+        }
+	}
+	
+	h3 {
         border-bottom: 1px solid #777;
 
         button {
