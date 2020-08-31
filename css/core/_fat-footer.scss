@@ -10,16 +10,6 @@
         @include screen('desktop') {
             padding: 0;
         }
-
-        > div {
-            width: 100%;
-            padding: 0.5em 2em;
-
-            @include screen('desktop') {
-                padding: 1.75em 2em;
-                width: 25%;
-            }
-        }
     }
     
     h3 {
