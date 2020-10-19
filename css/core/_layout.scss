@@ -45,8 +45,8 @@
 .main-content {
     order: 1;
     padding: 0;
-    
-    @include print {
+	
+	@include print {
         page-break-inside: avoid;
         display: block;
         padding: 0;
@@ -56,6 +56,10 @@
         order: 2;
         padding: 0 2.5em;
         width: 60%;
+
+		&.two-column {
+			width: 100%;
+		}
     }
 }
 
