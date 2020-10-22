@@ -48,21 +48,19 @@
 
 .two-column {
 	.image-gallery {
-		background-color: #fff;
-		
 		&.col2 li {
 			@include screen(tablet) {
-				height: 275px;
+				height: 275px !important;
 			}
 		}
 		&.col3 li {
 			@include screen(tablet) {
-				height: 200px;
+				height: 200px !important;
 			}
 		}
 		&.col4 li {
 			@include screen(tablet) {
-				height: 150px;
+				height: 150px !important;
 			}
 		}
 	}
