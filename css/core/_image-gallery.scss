@@ -2,6 +2,20 @@
     margin-bottom: 0.25em;
 }
 
+.main-content.two-column {
+	.image-gallery {	
+		&.col2 li {
+			height: 275px;
+		}
+		&.col3 li {
+			height: 200px;
+		}
+		&.col4 li {
+			height: 150px;
+		}
+	}
+}
+
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
