@@ -47,7 +47,9 @@
 }
 
 .two-column {
-	.image-gallery {	
+	.image-gallery {
+		background-color: #fff;
+		
 		&.col2 li {
 			@include screen(tablet) {
 				height: 275px;
