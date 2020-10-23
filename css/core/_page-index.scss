@@ -75,6 +75,11 @@
             }
         }
     }
+	
+	.sub-page-index {
+		margin-top: 1rem;
+		list-style-type: square;
+	}
     
     &.no-title .index-title,
     &.no-thumb .index-image, 
