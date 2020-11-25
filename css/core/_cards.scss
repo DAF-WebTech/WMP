@@ -58,3 +58,17 @@
 		}
 	}
 }
+
+.fullwidth .cards {
+	@include screen(tablet) {
+		&.col-2 {
+			.card-image { height: 350px; }
+		}
+		&.col-3 {
+			.card-image { height: 250px; }
+		}
+		&.col-4 {
+			.card-image { height: 200px; }
+		}
+	}
+}
