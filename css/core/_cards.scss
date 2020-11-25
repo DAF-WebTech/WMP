@@ -39,7 +39,6 @@
         margin: 0.5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
 		.card-image {
 			height: 180px;
@@ -51,6 +50,11 @@
 				height: 100%;
 				display: block;
 			}
+		}
+		.card-description {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 	}
 }
