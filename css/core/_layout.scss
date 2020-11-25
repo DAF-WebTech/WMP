@@ -55,7 +55,7 @@
     @include screen('desktop') {
         order: 2;
         padding: 0 2.5em;
-        width: 60%;
+        /*width: 60%;*/
 
 		&.two-column {
 			width: 100%;
