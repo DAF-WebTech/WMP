@@ -9,6 +9,7 @@
             color: #555;
             border-bottom: 1px solid #ddd;
 			display: block;
+			pointer-events: none;
 
             .toggle::after {
                 display: flex;
