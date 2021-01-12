@@ -8,8 +8,7 @@
         .accordion-title {
             color: #555;
             border-bottom: 1px solid #ddd;
-			display: block;
-			pointer-events: none;
+			display: block;			
 
             .toggle::after {
                 display: flex;
