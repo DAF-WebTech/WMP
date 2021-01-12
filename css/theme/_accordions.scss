@@ -1,7 +1,10 @@
 .accordion {
 
     .accordion-item {
-
+		h3 {
+			margin: 0;
+		}
+		
         .accordion-title {
             color: #555;
             border-bottom: 1px solid #ddd;
