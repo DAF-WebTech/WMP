@@ -18,6 +18,9 @@
 			&:active {
 				top: 0;
 			}
+			&:focus:not(:focus-visible) {
+        		outline: none;
+    		}
 		}
 		.accordion-title {
             margin: 0;
