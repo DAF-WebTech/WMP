@@ -22,35 +22,44 @@ QG.navigation = function() {
 
 
 QG.accordion = function() {
-    var accType = $(".accordion").data("accordion-type");
+    function closeAccordionItem (li, button) {
+    	li.removeClass("active")
+    	li.find(".accordion-content").slideUp(300)
+    	button.attr("aria-expanded", "false")
+    }
+    
+    function openAccordionItem (li, button) {
+    	li.addClass("active")
+    	li.find(".accordion-content").slideDown(300)
+    	button.attr("aria-expanded", "true")
+    }
+    
+    var accordion = $("ul.accordion") 
+    
+    accordion.find("button.accordion-trigger").click(function() {
 
-    $('.accordion .accordion-title').click(function() {
-        var accItem = $(this).parent();
-
-        if (accType == "multiple") {
-            if (accItem.hasClass('active')) {
-                accItem.removeClass('active');
-                accItem.find(".accordion-content").slideUp(300);
-            }
-            else {
-                accItem.addClass('active');
-                accItem.find('.accordion-content').slideDown(300);
-            }
-        } 
-        else {
-            if (accItem.hasClass('active')) {
-                accItem.removeClass('active');
-                accItem.find(".accordion-content").slideUp(300);
-            }
-            else {
-                $(".accordion .accordion-item").removeClass('active');
-                $(".accordion .accordion-content").slideUp(300);
-                accItem.addClass('active');
-                accItem.find('.accordion-content').slideDown(300);
-            }
+        var myButton = $(this)
+        var currentItem = myButton.closest("li.accordion-item")
+        
+        // A. if our accordion item is open, close it (always do this for both single and multiple)
+        if (currentItem.hasClass("active")) {
+        	closeAccordionItem(currentItem, myButton)
         }
-    });
+        
+        else { // opening
+        
+        	// B. always open the currently clicked item 
+        	openAccordionItem(currentItem, myButton)
+        
+        	// C. if accordion is a single type, then close the previously opened item.	
+        	if ($(".accordion").data("accordionType") == "single") {
+        		var previousItem = accordion.find("li.accordion-item.active").not(currentItem) // should only be  one
+        		closeAccordionItem(previousItem, previousItem.find("button")) 
+        	}
+        }
+    })
 };
+
 
 QG.fancybox = function() {
     $(".content-image.active a").fancybox();
