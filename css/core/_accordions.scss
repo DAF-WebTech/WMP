@@ -5,6 +5,9 @@
 	clear: both;
 
     .accordion-item {
+		h3 {
+			margin: 0;
+		}
         
         .accordion-trigger {
 			background-color: transparent;
