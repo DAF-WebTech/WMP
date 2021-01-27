@@ -6,13 +6,27 @@
     flex-wrap: wrap;
     text-align: center;
 
-    @include screen(tablet) {
-        &.col-2 {
+	@include screen(tablet) {
+        &.col-2,
+		&.col-3,
+		&.col-4 {
             li {
                 width: calc(50% - 1rem);				
 
 				.card-image {
 					height: 225px;
+				}
+			}
+        }
+	}
+
+	@include screen(desktop) {
+        &.col-2 {
+            li {
+                width: calc(50% - 1rem);				
+
+				.card-image {
+					height: 250px;
 				}
 			}
         }
