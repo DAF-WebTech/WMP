@@ -4,7 +4,8 @@
 	"description": "The cue template that is used by ITP Web for new sites.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build-css": "sass --style=compressed --no-source-map css/core/core.scss build-output/core.css"
 	},
 	"repository": {
 		"type": "git",
