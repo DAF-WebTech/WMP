@@ -1,0 +1,2 @@
+put build-output/core.css file_bridge/wmp/core.css
+
