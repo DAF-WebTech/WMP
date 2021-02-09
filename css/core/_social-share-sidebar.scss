@@ -43,12 +43,3 @@
         margin: 0;
     }    
 }
-
-.fullwidth .sidebar-site-utilities {
-    @include screen(desktop) {
-        flex-direction: row;
-        position: initial;
-        float: right;
-        margin-left: 2em;
-    }
-}
