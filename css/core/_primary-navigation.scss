@@ -106,20 +106,7 @@
                 padding: 0;
                 list-style-type: none;
                 font-size: 0.9em;
-
-                li {
-                    padding: 0 0.5em;
-                    border-right: 1px solid #999;
-                    margin-bottom: 2px;
-                    line-height: 1.1;
-                }
-                li:first-child {
-                    padding-right: 0;
-                }
-                li:first-child,
-                li:last-child {
-                    border-style: none;
-                }
+				line-height: 1.3;
             }
         }
     }
