@@ -111,6 +111,7 @@ QG.globalAlert = function() {
         $(".close-alert").click(function() {
 			try {
             	sessionStorage.setItem("alertState", "closed");
+			}
 			catch(err) { /*no sessionStorage is no problem */ }
 			$(".global-alert").slideUp(150);
         });
