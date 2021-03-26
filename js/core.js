@@ -109,8 +109,10 @@ QG.globalAlert = function() {
     else {
         $(".global-alert").show();
         $(".close-alert").click(function() {
-            sessionStorage.setItem("alertState", "closed");
-            $(".global-alert").slideUp(150);
+			try {
+            	sessionStorage.setItem("alertState", "closed");
+			catch(err) { /*no sessionStorage is no problem */ }
+			$(".global-alert").slideUp(150);
         });
     }
 };
