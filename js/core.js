@@ -97,16 +97,19 @@ QG.fatFooter = function() {
     only display it if the state does not equal "closed"
 ====---------------------------------------------------------==*/
 QG.globalAlert = function() {
-    // sessionStorage.setItem("alertState","");
-    var windowClosed = sessionStorage.getItem("alertState");
-    
+    var windowClosed = null;
+	try {
+    	windowClosed = sessionStorage.getItem("alertState");
+	}
+	catch(err) { /*no sessionStorage is no problem */ }
+		
     if ( windowClosed === "closed" ) {
         $(".global-alert").remove();
     }
     else {
         $(".global-alert").show();
         $(".close-alert").click(function() {
-            sessionStorage.setItem("alertState","closed");
+            sessionStorage.setItem("alertState", "closed");
             $(".global-alert").slideUp(150);
         });
     }
