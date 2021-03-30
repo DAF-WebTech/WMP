@@ -10,7 +10,7 @@
         &.col-2,
 		&.col-3,
 		&.col-4 {
-            li {
+            > li {
                 width: calc(50% - 1rem);				
 
 				.card-image {
@@ -22,7 +22,7 @@
 
 	@include screen(desktop) {
         &.col-2 {
-            li {
+            > li {
                 width: calc(50% - 1rem);				
 
 				.card-image {
@@ -31,7 +31,7 @@
 			}
         }
         &.col-3 {
-            li {
+            > li {
                 width: calc(33.33333333% - 1rem);
 				
 				.card-image {
@@ -40,7 +40,7 @@
             }
         }
         &.col-4 {
-            li {
+            > li {
                 width: calc(25% - 1rem);
 				.card-image {
 					height: 160px;
@@ -49,7 +49,7 @@
         }
     }
     
-    li {
+    > li {
         margin: 0.5rem;
         display: flex;
         flex-direction: column;
