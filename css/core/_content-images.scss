@@ -13,8 +13,13 @@
     img {
         width: 100%;
     }
-    
-    @include screen('mobile') {
+    &.original {
+		img {
+			width: auto;
+		}
+	}    
+	
+	@include screen('mobile') {
         &.w50 {
             width: 100% !important;
         }
