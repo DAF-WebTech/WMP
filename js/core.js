@@ -149,7 +149,7 @@ QG.secondaryNav = function() {
     INITIALISATION 
 ====-------------------------------------------------------------------==*/
 QG.init = QG.init || [];
-QG.init.unshift(QG.navigation, QG.globalAlert, QG.accordion, QG.fancybox, QG.slickslider, QG.fatFooter);
+QG.init.unshift(QG.navigation, QG.secondaryNav, QG.globalAlert, QG.accordion, QG.fancybox, QG.slickslider, QG.fatFooter);
 
 $(document).ready(function() {
     QG.init.forEach(function(f) {
