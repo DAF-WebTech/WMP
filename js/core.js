@@ -127,6 +127,24 @@ QG.globalAlert = function() {
 };
 
 
+/*==---------------------------------------------------------====
+   Secondary Navigation
+====---------------------------------------------------------====
+    Add "active" state to current page in secondary nav, as
+    Asset Listing is now ESI
+====---------------------------------------------------------==*/
+QG.secondaryNav = function() {
+    var path = window.location.origin + window.location.pathname + window.location.hash;
+    path = path.replace(/\/\_nocache/g, "");
+    path = path.replace(/\/\_recache/g, "");
+
+    $('.secondary-nav a').each(function() {
+        if (this.href === path) {
+            $(this).parent().addClass('active');
+        }
+    });
+};
+
 /*==-------------------------------------------------------------------====
     INITIALISATION 
 ====-------------------------------------------------------------------==*/
