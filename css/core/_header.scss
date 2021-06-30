@@ -9,10 +9,11 @@ header {
     
         a {
             text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
         .header-department {
             padding: 0.75em 1em;
             
@@ -22,18 +23,20 @@ header {
             
             .logos {
                 width: 200px;
-
-                picture {
-                    @include print {
-                        display: none;
-                    }
-                }
                 @include screen('tablet') {
                     width: 300px;
                 }
-               
                 @include print {
                     width: 300px;
+                }
+
+				picture {
+                    img {
+						width: 100%;
+					}
+					@include print {
+                        display: none;
+                    }
                 }
                 .print-logo {
                     display: none;
@@ -41,9 +44,7 @@ header {
                     @include print {
                         display: block;
                     }
-                }   
-             
-            
+                }
                 a {
                     display: block;
                 }
@@ -88,10 +89,10 @@ header {
                 padding: 0;
                 cursor: pointer;
                 border-radius: 0;
-            }
-            button:active {
-                top: 1px;
-            }
+            	&:active {
+                	top: 1px;
+            	}
+			}
 
             .icon-menu-toggle {
                 @include screen('desktop') {
@@ -161,10 +162,11 @@ header {
                     font-size: 0.85em;
                     line-height: 1.2;
                     padding: 0 0.75em;
-                }
-                > li:last-child {
-                    border-style: none;
-                }
+                	
+					&:last-child {
+                    	border-style: none;
+                	}
+				}
             }
         }
     }
