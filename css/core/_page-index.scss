@@ -74,7 +74,15 @@
                 }
             }
         }
-    }
+        &.col-5 {
+            .page-index-item { 
+                width: calc(20% - 1.5rem); 
+            
+                .index-image {
+                    height: 100px;
+                }
+            }
+        }    }
 	
 	.sub-page-index {
 		margin-top: 1rem;
