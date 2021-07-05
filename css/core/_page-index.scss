@@ -82,7 +82,18 @@
                     height: 100px;
                 }
             }
-        }    }
+        }    
+	}
+
+	@include screen(desktop) {
+		&.col-5 {
+			.page-index-item { 
+				.index-image {
+					height: 150px;
+				}
+			}
+		}
+	}
 	
 	.sub-page-index {
 		margin-top: 1rem;
