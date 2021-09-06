@@ -1,6 +1,6 @@
 .event {
     .event-description {
-        margin-top: 1em;
+        margin-top: 1rem;
     }
 }
 
@@ -13,14 +13,35 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+	
+	@include screen(tablet) {
+		&.row-2 {
+			.event-item {
+				width: calc(50% - 1rem);
+			}
+		}
+		&.row-3 {
+			.event-item {
+				width: calc(33.33333333% - 1rem);
+			}
+		}
+		&.row-4 {
+			.event-item {
+				width: calc(25% - 1rem);
+			}
+		}
+		&.row-5 {
+			.event-item {
+				width: calc(20% - 1rem);
+			}
+		}
+	}
     
     .event-item {
         border: 1px solid #e6e6e6;
         border-bottom-width: 2px;
-        @include screen(tablet) {
-            width: calc(33.33333333% - 1em);
-        }
-        margin: 0.5em;
+        width: 100%;
+		margin: 0.5rem;
 
         .event-image {
             background-color: #e6e6e6;
