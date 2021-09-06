@@ -14,23 +14,22 @@
         flex-wrap: wrap;
         align-items: flex-start;
 		
-		&.row-2 {
-			.event-item {
+		&.col-2 {
+			li {
 				width: calc(50% - 1rem);
 			}
 		}
-		&.row-3 {
-			background-color: #c00;
+		&.col-3 {
 			.event-item {
 				width: calc(33.33333333% - 1rem);
 			}
 		}
-		&.row-4 {
+		&.col-4 {
 			.event-item {
 				width: calc(25% - 1rem);
 			}
 		}
-		&.row-5 {
+		&.col-5 {
 			.event-item {
 				width: calc(20% - 1rem);
 			}
