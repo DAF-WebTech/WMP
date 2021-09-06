@@ -5,7 +5,11 @@
 }
 
 .event-listing {
-    @include screen(tablet) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	
+	@include screen("tablet") {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -31,9 +35,6 @@
 			}
 		}
 	}
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 	
     .event-item {
         border: 1px solid #e6e6e6;
