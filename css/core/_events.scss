@@ -9,12 +9,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-    }
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-	
-	@include screen(tablet) {
+		
 		&.row-2 {
 			.event-item {
 				width: calc(50% - 1rem);
@@ -36,7 +31,10 @@
 			}
 		}
 	}
-    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	
     .event-item {
         border: 1px solid #e6e6e6;
         border-bottom-width: 2px;
